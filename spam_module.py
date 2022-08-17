@@ -3,14 +3,10 @@ import requests
 # Spam module
 class SpamModule:
 	#region Constructors etc
-	def __init__(self, endpoint):
+	def __init__(self, endpoint, apikey = ""):
 		self.endpoint = endpoint
-		self.apikey = ""
+		self.apikey = apikey
 		self.message_id = 0
-
-	#def __init__(self, endpoint, apikey):
-	#	super().__init__(self, endpoint)
-	#	self.apikey = apikey
 
 	def __repr__(self) -> str:
 		return f"{type(self).__name__} (endpoint={self.endpoint})"
